@@ -7,11 +7,9 @@ import Navbar from "./Navbar";
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <Tags />
       <VideoGrids />
       <Pagination />
-      <Footer />
     </div>
   );
 };

@@ -8,11 +8,11 @@ import Navbar from "./Navbar";
 const Video = () => {
   return (
     <div>
-      <Navbar />
+      
       <Player />
       <VideoDescription />
       <RelatedVideoList />
-      <Footer />
+      
     </div>
   );
 };

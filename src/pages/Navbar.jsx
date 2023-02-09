@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Search from "../components/Search";
+import { CiSearch } from "react-icons/ci";
 
 const Navbar = () => {
   return (
@@ -16,11 +17,7 @@ const Navbar = () => {
         <div className="border border-slate-200 flex items-center bg-white h-10 px-5 rounded-lg text-sm ring-emerald-200">
           {/* search  */}
           <Search />
-          <img
-            className="inline h-4 cursor-pointer"
-            src="../assets/search.svg"
-            alt="Search"
-          />
+          <CiSearch />
         </div>
       </div>
     </nav>

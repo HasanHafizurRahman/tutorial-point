@@ -10,9 +10,11 @@ const VideoGrids = () => {
     (state) => state.videos
   );
 
+  const { tags, search } = useSelector((state) => state.filter);
+
   useEffect(() => {
-    dispatch(fetchVideos());
-  }, [dispatch]);
+    dispatch(fetchVideos({ tags, search }));
+  }, [dispatch, tags, search]);
 
   // logic for rendering
   let content;
@@ -28,7 +30,7 @@ const VideoGrids = () => {
   }
   return (
     <section className="pt-12">
-      <section className="pt-12">
+      <section>
         <div className="grid grid-cols-12 gap-4 max-w-7xl mx-auto px-5 lg:px-0 min-h-[300px]">
           {content}
         </div>

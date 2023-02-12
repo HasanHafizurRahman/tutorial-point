@@ -28,12 +28,14 @@ const Video = () => {
     content = <div className="col-span-12">No Video Found!</div>;
   if (!isLoading && !isError && video?.id)
     content = (
-      <div className="grid grid-cols-3 gap-2 lg:gap-4">
-        <div className="col-span-full w-full space-y-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-8">
+        <div className="col-span-full w-full space-y-8 lg:col-span-2">
           <Player link={link} title={title} />
           <VideoDescription video={video} />
         </div>
-        <RelatedVideoList currentVideoId={id} tags={tags} />
+        <div className="grid grid-cols-1">
+          <RelatedVideoList currentVideoId={id} tags={tags} />
+        </div>
       </div>
     );
   return (

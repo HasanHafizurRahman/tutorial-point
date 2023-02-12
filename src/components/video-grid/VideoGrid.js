@@ -31,7 +31,7 @@ const VideoGrid = ({ video }) => {
             }
           </Link>
 
-          <div clas="flex flex-col">
+          <div className="flex flex-col">
             <Link to="/videos/1">
               <p className="text-slate-900 text-sm font-semibold">{title}</p>
             </Link>
